@@ -1,0 +1,1159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A4 Celebrations - Premium Event Hall</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <!-- Lightbox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --primary-color: #d4af37; /* Gold */
+      --secondary-color: #333333;
+      --accent-color: #8b0000;
+      --light-color: #f8f9fa;
+      --dark-color: #212529;
+      --transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--secondary-color);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    
+    .navbar {
+      transition: var(--transition);
+      padding: 20px 0;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .navbar.scrolled {
+      background-color: rgba(0, 0, 0, 0.95) !important;
+      padding: 12px 0;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 26px;
+      color: var(--primary-color) !important;
+      letter-spacing: 1px;
+    }
+    
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin: 0 12px;
+      position: relative;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      bottom: 0;
+      left: 0;
+      transition: var(--transition);
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+    
+    .nav-link.active:after {
+      width: 100%;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      height: 100vh;
+      min-height: 700px;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-section:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('assets/images/overlay-pattern.png');
+      opacity: 0.15;
+      pointer-events: none;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-content h1 {
+      font-size: 4rem;
+      margin-bottom: 25px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+      letter-spacing: 1px;
+    }
+    
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 35px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Floating Elements */
+    .floating-elements {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .floating-element {
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.7;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .floating-element.flower1 {
+      width: 80px;
+      height: 80px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23d4af37" d="M50 10C60 20 70 25 80 30 70 40 65 50 60 60 50 50 40 45 30 40 40 30 45 20 50 10Z"/></svg>');
+      top: 15%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+    
+    .floating-element.flower2 {
+      width: 60px;
+      height: 60px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23d4af37" d="M50 20C55 30 60 35 65 40 55 45 50 50 45 55 40 50 35 45 30 40 35 35 40 30 50 20Z"/></svg>');
+      top: 25%;
+      right: 15%;
+      animation-delay: 1s;
+    }
+    
+    .floating-element.ring {
+      width: 50px;
+      height: 50px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23d4af37" stroke-width="5"/><circle cx="50" cy="50" r="30" fill="none" stroke="%23d4af37" stroke-width="3"/></svg>');
+      bottom: 20%;
+      left: 20%;
+      animation-delay: 2s;
+    }
+    
+    .floating-element.hearts {
+      width: 70px;
+      height: 70px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23d4af37" d="M50 30C40 20 30 25 20 35 30 45 40 55 50 65 60 55 70 45 80 35 70 25 60 20 50 30Z"/></svg>');
+      bottom: 30%;
+      right: 10%;
+      animation-delay: 3s;
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+    }
+    
+    /* Divider */
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    
+    .divider-line {
+      height: 2px;
+      background: var(--primary-color);
+      width: 80px;
+      position: relative;
+    }
+    
+    .divider-line:before, .divider-line:after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      top: -5px;
+    }
+    
+    .divider-line:before {
+      left: -15px;
+    }
+    
+    .divider-line:after {
+      right: -15px;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      color: var(--dark-color);
+      font-weight: 600;
+      padding: 14px 35px;
+      border-radius: 30px;
+      transition: var(--transition);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-size: 15px;
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    }
+    
+    .btn-primary:hover {
+      background-color: transparent;
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    }
+    
+    .section-title {
+      position: relative;
+      margin-bottom: 60px;
+      font-size: 2.5rem;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 4px;
+      background: var(--primary-color);
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    
+    .feature-box {
+      padding: 35px 25px;
+      border-radius: 10px;
+      transition: var(--transition);
+      margin-bottom: 30px;
+      text-align: center;
+      background-color: white;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.1);
+      height: 100%;
+    }
+    
+    .feature-box:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      border-color: rgba(212, 175, 55, 0.3);
+    }
+    
+    .feature-icon {
+      font-size: 3.5rem;
+      color: var(--primary-color);
+      margin-bottom: 25px;
+      transition: var(--transition);
+    }
+    
+    .feature-box:hover .feature-icon {
+      transform: scale(1.1);
+    }
+    
+    /* Video Section */
+    .video-section {
+      position: relative;
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('assets/images/video-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 0;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+    
+    .video-section:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('assets/images/dot-pattern.png');
+      opacity: 0.1;
+      pointer-events: none;
+    }
+    
+    .video-play-btn {
+      width: 90px;
+      height: 90px;
+      background: var(--primary-color);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      transition: var(--transition);
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+    }
+    
+    .video-play-btn:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--primary-color);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+      z-index: -1;
+    }
+    
+    .video-play-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 15px 40px rgba(212, 175, 55, 0.7);
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+    
+    /* Gallery Section */
+    .gallery-item {
+      margin-bottom: 30px;
+      overflow: hidden;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
+    }
+    
+    .gallery-item img {
+      transition: var(--transition);
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    
+    .gallery-item:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(212, 175, 55, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-section:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23d4af3733" d="M50 0C30 0 20 20 20 50 20 80 30 100 50 100 70 100 80 80 80 50 80 20 70 0 50 0Z"/></svg>');
+      opacity: 0.1;
+      z-index: 0;
+      animation: floatPattern 30s linear infinite;
+    }
+
+    @keyframes floatPattern {
+      0% { transform: translateY(0) translateX(0); }
+      25% { transform: translateY(-50px) translateX(50px); }
+      50% { transform: translateY(0) translateX(100px); }
+      75% { transform: translateY(50px) translateX(50px); }
+      100% { transform: translateY(0) translateX(0); }
+    }
+
+    .contact-form-container {
+      position: relative;
+      z-index: 1;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+
+    .form-control {
+      transition: all 0.4s ease;
+      transform-origin: left;
+      padding: 15px;
+      border-radius: 0;
+      border: none;
+      border-bottom: 2px solid #eee;
+      margin-bottom: 25px;
+      font-size: 15px;
+      background-color: rgba(248, 249, 250, 0.5);
+    }
+
+    .form-control:focus {
+      transform: scaleX(1.02);
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
+      border-bottom-color: var(--primary-color);
+      background-color: white;
+    }
+
+    /* Envelope Animation for Submit Button */
+    .btn-envelope {
+      position: relative;
+      overflow: hidden;
+      padding-left: 50px;
+      transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .btn-envelope:before {
+      content: '\f658';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .btn-envelope:hover {
+      padding-left: 60px;
+      padding-right: 40px;
+    }
+
+    .btn-envelope:hover:before {
+      left: 15px;
+      animation: envelopeFly 0.6s ease-out forwards;
+    }
+
+    @keyframes envelopeFly {
+      0% { transform: translateY(-50%) translateX(0) rotate(0deg); }
+      50% { transform: translateY(-100%) translateX(20px) rotate(15deg); }
+      100% { transform: translateY(-50%) translateX(0) rotate(0deg); }
+    }
+
+    /* Phone Ring Animation */
+    .contact-info-box.phone-box:hover .contact-info-icon {
+      animation: phoneRing 0.5s ease infinite;
+    }
+
+    @keyframes phoneRing {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(15deg); }
+      75% { transform: rotate(-15deg); }
+    }
+
+    .contact-info-box {
+      background: white;
+      padding: 35px 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid rgba(212, 175, 55, 0.1);
+      height: 100%;
+    }
+    
+    .contact-info-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      border-color: rgba(212, 175, 55, 0.3);
+    }
+    
+    .contact-info-icon {
+      font-size: 2.8rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      transition: var(--transition);
+    }
+    
+    .contact-info-box:hover .contact-info-icon {
+      transform: scale(1.1);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--dark-color);
+      color: white;
+      padding: 70px 0 30px;
+      position: relative;
+    }
+    
+    footer:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--primary-color));
+    }
+    
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 1.2rem;
+      margin: 0 8px;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+    
+    .social-icons a:hover {
+      background: var(--primary-color);
+      color: var(--dark-color);
+      transform: translateY(-5px);
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 55px;
+      height: 55px;
+      background: var(--primary-color);
+      color: var(--dark-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .back-to-top:hover {
+      background: white;
+      transform: translateY(-5px);
+    }
+    
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Confetti Animation */
+    .confetti-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+      display: none;
+    }
+    
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: var(--primary-color);
+      opacity: 0;
+      animation: confetti-fall 5s linear forwards;
+    }
+    
+    @keyframes confetti-fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    
+    /* Mobile Styles */
+    @media (max-width: 991.98px) {
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.3rem;
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 50px;
+      }
+      
+      .feature-box, .contact-info-box {
+        padding: 25px 20px;
+      }
+      
+      .floating-element {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 767.98px) {
+      .hero-section {
+        min-height: 600px;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+      
+      .btn-primary {
+        padding: 12px 25px;
+      }
+      
+      .contact-form-container {
+        padding: 25px;
+      }
+    }
+    
+    @media (max-width: 575.98px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+    
+    /* Show floating elements on mobile */
+    .floating-element {
+      display: block !important; /* Override any hiding */
+    }
+    
+    /* Adjust floating elements size for mobile */
+    @media (max-width: 767.98px) {
+      .floating-element.flower1 {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .floating-element.flower2 {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .floating-element.ring {
+        width: 30px;
+        height: 30px;
+      }
+      
+      .floating-element.hearts {
+        width: 45px;
+        height: 45px;
+      }
+    }
+    
+    /* Fix back-to-top button */
+    .back-to-top {
+      cursor: pointer; /* Make it clickable */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Confetti Container -->
+  <div class="confetti-container" id="confettiContainer"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">A4 Celebrations</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="floating-elements">
+      <div class="floating-element flower1"></div>
+      <div class="floating-element flower2"></div>
+      <div class="floating-element ring"></div>
+      <div class="floating-element hearts"></div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto hero-content">
+          <h1 class="animate__animated animate__fadeInDown">A4 Celebration Hall</h1>
+          <div class="divider">
+            <div class="divider-line"></div>
+          </div>
+          <p class="lead animate__animated animate__fadeInUp">THE ELEGANT HOME FOR YOUR SPECIAL OCCASIONS</p>
+          <a href="#about" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-1s">Explore More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+          <img src="assets/images/about.jpg" alt="About A4 Celebrations" class="img-fluid rounded shadow-lg">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <h2 class="section-title">About Our Hall</h2>
+          <p class="lead">Welcome to A4 Celebration Hall, the perfect venue for all your special occasions.</p>
+          <p>Whether you're planning a wedding, engagement, Mehandi function, birthday party, wedding anniversary, family get-together, award ceremony, or any special event, we offer a beautiful space where you can gather, celebrate, and create unforgettable memories.</p>
+          <p>Our hall is thoughtfully designed to provide a warm and enjoyable atmosphere, with both AC and non-AC options available to suit your preferences and comfort. We are committed to ensuring that your event is truly special, filled with joy, and memorable for you and your guests.</p>
+          <div class="row mt-4">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h3>400+ Seating</h3>
+                <p>Spacious hall capacity</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <h3>300+ Dining</h3>
+                <p>Comfortable dining space</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-box">
+                <div class="feature-icon">
+                  <i class="fas fa-restroom"></i>
+                </div>
+                <h3>Dressing Rooms</h3>
+                <p>Private changing areas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <a href="https://youtube.com/shorts/3wH1UAbnb6g?si=BJDBwV-NpJvXaxtM" class="video-play-btn" data-lightbox>
+            <i class="fas fa-play"></i>
+          </a>
+          <h2 class="mb-4">Experience Our Venue</h2>
+          <p class="lead mb-5">Watch our video to see the hall in action</p>
+          <a href="#contact" class="btn btn-outline-light btn-lg px-4">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title">Gallery</h2>
+          <p class="lead mb-5">Explore our beautiful event space through these images</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-item">
+            <a href="assets/images/1.jpg" data-lightbox="gallery">
+              <img src="assets/images/1.jpg" alt="Gallery Image 1" class="img-fluid">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus fa-2x"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-item">
+            <a href="assets/images/2.jpg" data-lightbox="gallery">
+              <img src="assets/images/2.jpg" alt="Gallery Image 2" class="img-fluid">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus fa-2x"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="gallery-item">
+            <a href="assets/images/3.jpg" data-lightbox="gallery">
+              <img src="assets/images/3.jpg" alt="Gallery Image 3" class="img-fluid">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus fa-2x"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-item">
+            <a href="assets/images/4.jpg" data-lightbox="gallery">
+              <img src="assets/images/4.jpg" alt="Gallery Image 4" class="img-fluid">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus fa-2x"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-item">
+            <a href="assets/images/5.jpg" data-lightbox="gallery">
+              <img src="assets/images/5.jpg" alt="Gallery Image 5" class="img-fluid">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus fa-2x"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="gallery-item">
+            <a href="assets/images/about.jpg" data-lightbox="gallery">
+              <img src="assets/images/about.jpg" alt="Gallery Image 6" class="img-fluid">
+              <div class="gallery-overlay">
+                <i class="fas fa-search-plus fa-2x"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light contact-section">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="section-title">Contact Us</h2>
+          <p class="lead">Get in touch to book your event or ask any questions</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-info-box">
+            <div class="contact-info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Location</h3>
+            <p><a href="https://maps.app.goo.gl/H4efARqHpUmPpHNU7" target="_blank" class="text-decoration-none">View on Google Maps</a></p>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+          <div class="contact-info-box phone-box">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Phone</h3>
+            <p><a href="tel:+918304941100" class="text-decoration-none">+91 83049 41100</a></p>
+            <p><a href="tel:+918304951100" class="text-decoration-none">+91 83049 51100</a></p>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="contact-info-box">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p><a href="mailto:A4celebrationhall@gmail.com" class="text-decoration-none">A4celebrationhall@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-8 mx-auto" data-aos="fade-up">
+          <div class="contact-form-container">
+            <form id="contactForm">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <input type="text" class="form-control" id="contactName" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <input type="tel" class="form-control" id="contactPhone" placeholder="Your Phone Number" required>
+                </div>
+              </div>
+              <div class="mb-4">
+                <input type="text" class="form-control" id="contactSubject" placeholder="Subject">
+              </div>
+              <div class="mb-4">
+                <textarea class="form-control" id="contactMessage" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg px-5 btn-envelope">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="social-icons mb-4">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <p class="mb-3">A4 Celebrations - The Perfect Venue for Your Special Occasions</p>
+          <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> A4 Celebrations. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    // Preloader
+    window.addEventListener('load', function() {
+      document.getElementById('preloader').style.display = 'none';
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        document.querySelector('.navbar').classList.add('scrolled');
+      } else {
+        document.querySelector('.navbar').classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Back to top button
+    document.getElementById('backToTop').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Form submission with WhatsApp integration
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('contactName').value;
+      const phone = document.getElementById('contactPhone').value;
+      const subject = document.getElementById('contactSubject').value;
+      const message = document.getElementById('contactMessage').value;
+      
+      // Create WhatsApp message
+      const whatsappMessage = `Hello A4 Celebrations,\n\nMy name is ${name} (Phone: ${phone}).\nRegarding: ${subject}\n\n${message}\n\nI'm interested in booking your hall. Please contact me.`;
+      
+      // Encode message for URL
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      
+      // Open WhatsApp chat in new tab
+      const whatsappUrl = `https://wa.me/919747763300?text=${encodedMessage}`;
+      window.open(whatsappUrl, '_blank');
+      
+      // Reset form
+      this.reset();
+      
+      // Trigger confetti animation
+      triggerConfetti();
+      
+      // Redirect back to index after 3 seconds (gives time to see confetti)
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 3000);
+    });
+
+    // Initialize lightbox
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'albumLabel': 'Image %1 of %2',
+      'fadeDuration': 300
+    });
+
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+
+    // Add animation to hero section on load
+    document.addEventListener('DOMContentLoaded', function() {
+      const heroTitle = document.querySelector('.hero-content h1');
+      const heroText = document.querySelector('.hero-content p');
+      const heroButton = document.querySelector('.hero-content .btn');
+      
+      setTimeout(() => {
+        heroTitle.classList.add('animate__animated', 'animate__fadeInDown');
+      }, 300);
+      
+      setTimeout(() => {
+        heroText.classList.add('animate__animated', 'animate__fadeInUp');
+      }, 600);
+      
+      setTimeout(() => {
+        heroButton.classList.add('animate__animated', 'animate__fadeInUp', 'animate__delay-1s');
+      }, 900);
+    });
+  </script>
+</body>
+</html>
