@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A4 Celebration Hall | Kerala Wedding Venue</title>
+<meta name="description" content="A4 Celebration Hall — a beautiful, budget-friendly destination for memorable functions and Kerala weddings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fffaf0;--gold:#c79b4b;--deep:#143c32;--green:#1e5948;--rose:#ead0bd;--ink:#24332e}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+nav{position:fixed;top:0;width:100%;z-index:20;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(255,250,240,.86);backdrop-filter:blur(12px);border-bottom:1px solid #eadfc9}
+.logo{font-family:"Cormorant Garamond";font-size:29px;font-weight:700;color:var(--deep);letter-spacing:.5px}.logo span{color:var(--gold)}
+nav a{color:var(--deep);text-decoration:none;margin-left:25px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:130px 6% 80px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 30%,#fff 0,#fffaf0 45%,#f1e5d0 100%)}
+.hero-stage{position:absolute;inset:0;z-index:0;opacity:.18;filter:saturate(.65) sepia(.15);}.hero-stage img{width:100%;height:100%;object-fit:cover;}.hero-stage:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,250,240,.72),rgba(255,250,240,.9));}.hero-content{position:relative;z-index:2}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(199,155,75,.35);border-radius:50%;width:480px;height:480px}.hero:before{top:-270px;left:-180px}.hero:after{bottom:-300px;right:-190px}
+.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;font-weight:700}
+h1,h2{font-family:"Cormorant Garamond",serif;color:var(--deep)}h1{font-size:clamp(65px,11vw,150px);line-height:.82;margin:20px 0}.hero p{max-width:650px;margin:0 auto 30px;font-size:17px;color:#53645d}
+.btn{display:inline-block;background:var(--deep);color:white;text-decoration:none;padding:14px 26px;border-radius:4px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:.3s}.btn:hover{background:var(--gold);transform:translateY(-3px)}
+section{padding:105px 7%;}.section-head{text-align:center;max-width:750px;margin:0 auto 55px}.section-head h2{font-size:clamp(45px,6vw,72px);line-height:1;margin:12px 0}.section-head p{color:#68766f}
+.about{background:white}.about-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about-card{background:var(--deep);color:white;padding:55px;position:relative}.about-card:after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.25);pointer-events:none}.about-card h3{font-family:"Cormorant Garamond";font-size:48px;color:#fff}.about-text h2{font-size:64px;line-height:1;margin-bottom:20px}.about-text p{margin-bottom:18px;color:#617069}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:auto}.feature{padding:35px;background:#fff;border:1px solid #eadfc9;text-align:center}.feature b{font-family:"Cormorant Garamond";font-size:30px;color:var(--deep);display:block;margin-bottom:8px}
+.gallery{background:#f5ead9}.slider{max-width:1050px;margin:auto;position:relative;border-radius:10px;overflow:hidden;box-shadow:0 18px 55px rgba(20,60,50,.16);touch-action:pan-y}.slides{position:relative;width:100%;aspect-ratio:16/9;background:#ddd}.slide{position:absolute;inset:0;opacity:0;transition:opacity .7s ease;pointer-events:none}.slide.active{opacity:1;pointer-events:auto}.slide img{width:100%;height:100%;object-fit:cover;display:block}.arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border:1px solid rgba(255,255,255,.7);border-radius:50%;background:rgba(20,60,50,.62);color:white;font-size:32px;line-height:1;cursor:pointer;z-index:3}.arrow:hover{background:var(--gold)}.prev{left:18px}.next{right:18px}.dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:3}.dot{width:8px;height:8px;border:0;border-radius:50%;background:rgba(255,255,255,.65);cursor:pointer}.dot.active{background:white;transform:scale(1.35)}.gallery-grid{display:none}.photo{overflow:hidden;position:relative;background:#d8c2a4}.photo:first-child{grid-row:span 2}.photo img{width:100%;height:100%;object-fit:cover;transition:.7s}.photo:hover img{transform:scale(1.07)}
+.cta{background:var(--deep);color:white;text-align:center}.cta h2{color:white;font-size:65px;line-height:1}.cta p{margin:20px auto 30px;max-width:620px;color:#d8e2dc}.cta .btn{background:var(--gold)}
+.map-section{background:#f5ead9}.map-wrap{max-width:1100px;margin:auto;position:relative}.map-wrap iframe{width:100%;height:420px;border:0;border-radius:8px;box-shadow:0 14px 40px rgba(20,60,50,.12)}.map-btn{position:absolute;left:24px;bottom:24px}.contact{background:white}.contact-grid{max-width:1000px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact h2{font-size:60px}.details p{margin:16px 0;color:#607069}.details strong{color:var(--deep)}form{display:grid;gap:13px}input,textarea{width:100%;padding:15px;border:1px solid #ddd1bd;background:#fffaf0;font:inherit}textarea{min-height:130px;resize:vertical}
+footer{background:#0d2c25;color:#cddbd5;text-align:center;padding:30px;font-size:12px;letter-spacing:.5px}
+.reveal{opacity:0;transform:translateY(25px);transition:1s}.reveal.show{opacity:1;transform:none}
+@media(max-width:760px){.slides{aspect-ratio:4/3}.arrow{width:40px;height:40px;font-size:28px}.prev{left:10px}.next{right:10px}.map-wrap iframe{height:330px}.map-btn{position:static;margin-top:14px;width:100%;text-align:center}nav{padding:14px 5%}.logo{font-size:23px}nav div a{margin-left:10px;font-size:10px}.hero{padding-top:110px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:30px}.features{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:180px}.photo:first-child{grid-row:span 2}.section-head h2,.about-text h2,.contact h2{font-size:48px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">A4 <span>Celebration Hall</span></div><div><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<div class="hero-stage" aria-hidden="true">
+  <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=80" alt="">
+</div>
+<div class="reveal hero-content">
+<div class="eyebrow">A Kerala Wedding Destination</div>
+<h1>A4<br>Celebration<br>Hall</h1>
+<p>A beautiful setting for weddings, receptions and cherished celebrations — thoughtfully designed for elegant functions at a budget-friendly value.</p>
+<a class="btn" href="#contact">Plan Your Celebration</a>
+</div>
+</header>
+
+<section id="about" class="about">
+<div class="about-grid">
+<div class="about-card reveal"><div class="eyebrow">Celebrate beautifully</div><h3>Where every function becomes a memory.</h3><p style="margin-top:20px;color:#d6e0db">A welcoming venue for families to gather, celebrate and create unforgettable moments.</p></div>
+<div class="about-text reveal"><div class="eyebrow">About A4</div><h2>A graceful hall for meaningful occasions.</h2><p>A4 Celebration Hall is a destination for weddings, receptions and family functions, bringing together comfort, elegance and the warmth of Kerala celebrations.</p><p>From the first welcome to the final photograph, our goal is simple: make your special day feel effortless, beautiful and memorable.</p></div>
+</div>
+</section>
+
+<section>
+<div class="section-head reveal"><div class="eyebrow">Made for celebrations</div><h2>Everything for your special day.</h2><p>A refined space that works beautifully for intimate gatherings and grand family occasions.</p></div>
+<div class="features">
+<div class="feature reveal"><b>Weddings</b>Traditional ceremonies with a polished, elegant setting.</div>
+<div class="feature reveal"><b>Receptions</b>A beautiful backdrop for guests, dining and photographs.</div>
+<div class="feature reveal"><b>Functions</b>A practical venue for birthdays, engagements and family events.</div>
+</div>
+</section>
+
+<section id="gallery" class="gallery">
+<div class="section-head reveal"><div class="eyebrow">A glimpse</div><h2>Our Gallery</h2><p>Replace these sample images with photographs of A4 Celebration Hall.</p></div>
+<div class="slider reveal">
+  <div class="slides">
+    <div class="slide active"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=85" alt="Elegant wedding stage"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1600&q=85" alt="Wedding reception"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=85" alt="Wedding ceremony"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1600&q=85" alt="Wedding flowers"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=85" alt="Celebration hall"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=85" alt="Wedding couple"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&w=1600&q=85" alt="Wedding dining"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1510076857177-2b4d6d2c1f0c?auto=format&fit=crop&w=1600&q=85" alt="Wedding decoration"></div>
+  </div>
+  <button class="arrow prev" aria-label="Previous photo">‹</button>
+  <button class="arrow next" aria-label="Next photo">›</button>
+  <div class="dots"></div>
+</div>
+</section>
+
+<section class="cta"><div class="reveal"><div class="eyebrow">Your day. Your memories.</div><h2>Let's make it beautiful.</h2><p>Tell us about your celebration and we'll help you take the next step.</p><a class="btn" href="#contact">Contact A4 Celebration Hall</a></div></section>
+
+<section id="contact" class="contact">
+<div class="contact-grid">
+<div class="reveal"><div class="eyebrow">Get in touch</div><h2>Contact Us</h2><div class="details">
+<p><strong>Venue</strong><br>A4 Celebration Hall</p>
+<p><strong>Phone</strong><br><a href="tel:+919999999999">+91 99999 99999</a></p>
+<p><strong>Email</strong><br><a href="mailto:hello@a4celebrationhall.com">hello@a4celebrationhall.com</a></p>
+<p><strong>Location</strong><br>Kerala, India</p>
+</div></div>
+<form class="reveal" onsubmit="sendMail(event)">
+<input id="name" placeholder="Your name" required><input id="phone" placeholder="Phone number" required><input id="date" placeholder="Preferred event date"><textarea id="message" placeholder="Tell us about your function"></textarea><button class="btn" type="submit">Send Enquiry</button>
+</form>
+</div>
+</section>
+<section class="map-section">
+<div class="section-head reveal"><div class="eyebrow">Find us</div><h2>Visit A4 Celebration Hall</h2><p>Get directions and find the hall easily with Google Maps.</p></div>
+<div class="map-wrap reveal">
+<iframe src="https://www.google.com/maps?q=A4%20CELEBRATION%20HALL%2C%2011.1638745%2C75.8425525&z=17&output=embed" loading="lazy" allowfullscreen title="A4 Celebration Hall location"></iframe>
+<a class="btn map-btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/UQktsjfDWRd38Yr97">Open Google Maps & Get Directions</a>
+</div>
+</section>
+<footer>© 2026 A4 Celebration Hall · A beautiful place for memorable celebrations.</footer>
+
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+const slides=[...document.querySelectorAll('.slide')], dots=document.querySelector('.dots'); let current=0, timer;
+slides.forEach((_,i)=>{const b=document.createElement('button');b.className='dot'+(i===0?' active':'');b.setAttribute('aria-label','Show photo '+(i+1));b.onclick=()=>showSlide(i);dots.appendChild(b)});
+const dotEls=[...document.querySelectorAll('.dot')];
+function showSlide(i){current=(i+slides.length)%slides.length;slides.forEach((s,k)=>s.classList.toggle('active',k===current));dotEls.forEach((d,k)=>d.classList.toggle('active',k===current));}
+function startSlider(){clearInterval(timer);timer=setInterval(()=>showSlide(current+1),4500)} 
+document.querySelector('.next').onclick=()=>{showSlide(current+1);startSlider()};document.querySelector('.prev').onclick=()=>{showSlide(current-1);startSlider()};startSlider();
+let sx=0;document.querySelector('.slider').addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});document.querySelector('.slider').addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>45){showSlide(current+(dx<0?1:-1));startSlider()}},{passive:true});
+function sendMail(e){
+e.preventDefault();
+const n=document.getElementById('name').value,p=document.getElementById('phone').value,d=document.getElementById('date').value,m=document.getElementById('message').value;
+const text=`Hello A4 Celebration Hall!%0A%0AI am enquiring about booking the hall.%0A%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}%0APreferred event date: ${encodeURIComponent(d)}%0AMessage: ${encodeURIComponent(m)}`;
+window.open('https://wa.me/919999999999?text='+text,'_blank');
+}
+</script>
+</body></html>
