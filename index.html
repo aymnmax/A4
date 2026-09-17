@@ -429,15 +429,21 @@ section{padding-top:82px;padding-bottom:82px}
 .venue-video{margin-top:48px}
 .contact-grid{gap:48px}
 .hero{min-height:82vh;padding-top:115px;padding-bottom:65px}
-@media(max-width:760px){
- .hero{min-height:calc(100svh - 64px);padding:88px 18px 46px !important;background-image:linear-gradient(rgba(255,250,240,.75),rgba(255,250,240,.83)),url("hall-background.webp") !important;background-position:center center !important;background-size:cover !important}
- section{padding-top:54px;padding-bottom:54px}
- .section-head{margin-bottom:28px}
- .about-grid{gap:26px}
- .venue-video{margin-top:32px}
- .contact-grid{gap:28px}
- .quick-strip>div{padding:15px 5px}
- .facility-grid{gap:10px}
+@media (max-width:760px){
+  .hero{
+    min-height:calc(100svh - 64px);
+    padding:88px 18px 46px !important;
+
+    background-image:
+      linear-gradient(rgba(255,250,240,.75), rgba(255,250,240,.83)),
+      url("hall-background.webp") !important;
+
+    background-size: contain !important;   /* Show full image */
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-color: #fffaf0;             /* Fill remaining space */
+  }
+
 }
 @media(max-width:430px){
  .hero{padding-top:82px !important;padding-bottom:40px !important}
