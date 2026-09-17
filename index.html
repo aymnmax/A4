@@ -413,6 +413,37 @@ footer{width:100%;box-sizing:border-box}
   }
 }
 
+
+/* FINAL REAL HALL BACKGROUND + PROFESSIONAL SPACING */
+.hero{
+  background-image:linear-gradient(rgba(255,250,240,.70),rgba(255,250,240,.76)),url("hall-background.webp") !important;
+  background-size:cover !important;
+  background-position:center 48% !important;
+  background-repeat:no-repeat !important;
+}
+.hero-content{position:relative;z-index:3}
+section{padding-top:82px;padding-bottom:82px}
+.section-head{margin-bottom:38px}
+.about-grid{gap:52px}
+.facility-grid{gap:14px}
+.venue-video{margin-top:48px}
+.contact-grid{gap:48px}
+.hero{min-height:82vh;padding-top:115px;padding-bottom:65px}
+@media(max-width:760px){
+ .hero{min-height:calc(100svh - 64px);padding:88px 18px 46px !important;background-image:linear-gradient(rgba(255,250,240,.75),rgba(255,250,240,.83)),url("hall-background.webp") !important;background-position:center center !important;background-size:cover !important}
+ section{padding-top:54px;padding-bottom:54px}
+ .section-head{margin-bottom:28px}
+ .about-grid{gap:26px}
+ .venue-video{margin-top:32px}
+ .contact-grid{gap:28px}
+ .quick-strip>div{padding:15px 5px}
+ .facility-grid{gap:10px}
+}
+@media(max-width:430px){
+ .hero{padding-top:82px !important;padding-bottom:40px !important}
+ section{padding-top:48px;padding-bottom:48px}
+ .section-head{margin-bottom:24px}
+}
 </style>
 </head>
 <body>
