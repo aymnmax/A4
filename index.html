@@ -431,17 +431,17 @@ section{padding-top:82px;padding-bottom:82px}
 .hero{min-height:82vh;padding-top:115px;padding-bottom:65px}
 @media (max-width:760px){
   .hero{
-    min-height:calc(100svh - 64px);
-    padding:88px 18px 46px !important;
+    min-height: calc(100svh - 64px);
+    padding: 88px 18px 46px !important;
 
     background-image:
       linear-gradient(rgba(255,250,240,.75), rgba(255,250,240,.83)),
       url("hall-background.webp") !important;
 
-    background-size: contain !important;   /* Show full image */
-    background-position: center top !important;
+    background-size: 125% auto !important;   /* Slight zoom */
+    background-position: center 18% !important; /* Move image a little up */
     background-repeat: no-repeat !important;
-    background-color: #fffaf0;             /* Fill remaining space */
+    background-color: #fffaf0;
   }
 
 }
